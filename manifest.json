@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Gemini Page Summarizer",
+  "version": "1.0",
+  "description": "Injects Gemini-generated summaries into pkotwicz2.github.io pages.",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://pkotwicz2.github.io/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "host_permissions": [
+    "https://generativelanguage.googleapis.com/*"
+  ]
+}
+
